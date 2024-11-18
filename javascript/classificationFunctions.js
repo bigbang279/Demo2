@@ -1,5 +1,3 @@
-// classificationFunctions.js
-
 import { wasteData } from "./wasteData.js";
 
 function classifyWaste() {
@@ -10,8 +8,8 @@ function classifyWaste() {
   const selectedLanguage = document.getElementById("languageSelect").value;
   const resultDiv = document.getElementById("result");
   const usageLink = document.getElementById("usageLink");
-  const usageSection = document.getElementById("usageSection");
 
+  // Kiểm tra nếu không có từ khóa
   if (!keyword) {
     const messages = {
       vi: "Vui lòng nhập từ khóa để phân loại rác.",
@@ -21,13 +19,13 @@ function classifyWaste() {
     };
     resultDiv.innerText = messages[selectedLanguage];
     resultDiv.style.color = "black";
-    usageLink.style.display = "none";
-    usageSection.style.display = "none";
+    usageLink.style.display = "none"; // Ẩn usageLink nếu không có từ khóa
     return;
   }
 
   let foundCategory = null;
 
+  // Tìm kiếm từ khóa trong wasteData theo ngôn ngữ
   for (const category in wasteData) {
     if (wasteData[category][selectedLanguage].includes(keyword)) {
       foundCategory = category;
@@ -75,11 +73,21 @@ function classifyWaste() {
       },
     };
 
+    // Hiển thị kết quả phân loại
     resultDiv.innerText = categoryMessages[foundCategory][selectedLanguage];
     resultDiv.style.color = "green";
-    usageLink.style.display = "inline";
-    usageSection.style.display = "none";
+
+    // Cập nhật URL và hiển thị liên kết
+    usageLink.href = wasteData[foundCategory].url;
+    usageLink.textContent = {
+      vi: `Nhấp vào đây để xem cách xử lý ${keyword}.`,
+      ja: `「${keyword}」の処理方法を見るにはここをクリックしてください。`,
+      en: `Click here to see how to handle ${keyword}.`,
+      mn: `${keyword}-г хэрхэн шийдвэрлэхийг энд дарж үзнэ үү.`,
+    }[selectedLanguage];
+    usageLink.style.display = "inline"; // Hiển thị liên kết khi có kết quả
   } else {
+    // Hiển thị thông báo nếu không tìm thấy
     const notFoundMessages = {
       vi: `Không tìm thấy thông tin về loại rác "${keyword}" trong ngôn ngữ đã chọn.`,
       ja: `選択した言語で「${keyword}」のゴミ情報が見つかりません。`,
@@ -88,14 +96,8 @@ function classifyWaste() {
     };
     resultDiv.innerText = notFoundMessages[selectedLanguage];
     resultDiv.style.color = "black";
-    usageLink.style.display = "none";
-    usageSection.style.display = "none";
+    usageLink.style.display = "none"; // Ẩn liên kết nếu không có kết quả
   }
-}
-
-function showUsageSection() {
-  const usageSection = document.getElementById("usageSection");
-  usageSection.style.display = "block";
 }
 
 // Gắn sự kiện cho các nút khi trang tải
@@ -104,5 +106,3 @@ document.addEventListener("DOMContentLoaded", () => {
     .getElementById("classifyButton")
     .addEventListener("click", classifyWaste);
 });
-
-export { classifyWaste, showUsageSection };

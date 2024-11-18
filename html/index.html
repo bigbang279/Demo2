@@ -16,7 +16,7 @@
         <img src="../img/logo.png" alt="Logo" />
       </a>
       <nav>
-        <a href="index.html">HOME</a>
+        <a href="./index.html">HOME</a>
         <a href="./info.html">INFO</a>
         <a href="./contact.html">CONTACT</a>
         <a href="./howto.html">USAGE</a>
@@ -25,15 +25,16 @@
 
     <!-- Main Content -->
     <main>
+      <!-- Slideshow Section -->
+      <section class="slideshow">
+        <div class="slides">
+          <img src="../img/catgomi.jpg" alt="Slide 1" class="slide" />
+          <img src="../img/slide2.png" alt="Slide 2" class="slide" />
+          <img src="../img/slide1.2.png" alt="Slide 3" class="slide" />
+        </div>
+      </section>
+
       <h1>ゴミの分別</h1>
-      <a href="./index.html">
-        <img
-          src="../img/catgomi.jpg"
-          alt="recycle"
-          width="400"
-          style="max-width: 100%; height: auto"
-        />
-      </a>
 
       <!-- Language and Classification Section -->
       <section class="classification">
@@ -61,10 +62,17 @@
       </section>
 
       <!-- Usage Link -->
-      <a href="./how to.html" id="usageLink" style="display: none"
-        >Nhấp vào đây để xem cách xử lý</a
-      >
+      <section style="margin-top: 20px">
+        <a href="./howto.html" id="usageLink" style="display: none"
+          >Click here for more details</a
+        >
+      </section>
     </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2024 日本生活ゴミ分別情報</p>
+    </footer>
 
     <!-- JavaScript -->
     <script
@@ -72,8 +80,6 @@
       src="../javascript/classificationFunctions.js"
     ></script>
     <script type="module" src="../javascript/wasteData.js"></script>
+    <script type="module" src="../javascript/app.js"></script>
   </body>
-  <footer>
-    <p>© 2024 日本生活ゴミ分別情報</p>
-  </footer>
 </html>

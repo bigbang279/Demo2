@@ -28,3 +28,27 @@ ul {
 ul li {
   margin: 10px 0;
 }
+.slideshow {
+  position: relative;
+  width: 500px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  align-items: center; /* Center images vertically */
+}
+
+.slide {
+  min-width: 100%;
+  height: auto;
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+}
+
+.slide img {
+  width: 100%; /* Ensure images fill the slide */
+  height: auto; /* Maintain aspect ratio */
+}
