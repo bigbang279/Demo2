@@ -239,17 +239,20 @@ export const wasteData = {
     ja: ["冷蔵庫", "洗濯機"],
     en: ["refrigerator", "washing machine"],
     mn: ["хөргөгч", "угаалгын машин"],
+    url: "../../html/usage/usage3.html",
   },
   appliances: {
     vi: ["máy sấy tóc", "bàn là"],
     ja: ["ヘアドライヤー", "アイロン"],
     en: ["hair dryer", "iron"],
     mn: ["үс хатаагч", "индүү"],
+    url: "../../html/usage/usage3.html",
   },
   electronics: {
     vi: ["máy tính", "điện thoại"],
     ja: ["コンピュータ", "携帯電話"],
     en: ["computer", "phone"],
     mn: ["компьютер", "утас"],
+    url: "../../html/usage/usage3.html",
   },
 };

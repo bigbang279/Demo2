@@ -43,3 +43,9 @@ main {
   margin: auto;
   backdrop-filter: blur(5px); /* Adds a subtle blur effect */
 }
+.imageusage1-img {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
