@@ -30,7 +30,7 @@ ul li {
 }
 .slideshow {
   position: relative;
-  width: 500px;
+  width: 350px;
   margin: 10px auto;
   overflow: hidden;
 }
@@ -44,8 +44,8 @@ ul li {
 .slide {
   min-width: 100%;
   height: auto;
-  margin: 0; /* Reset margin */
-  padding: 0; /* Reset padding */
+  margin: 10; /* Reset margin */
+  padding: 10; /* Reset padding */
 }
 
 .slide img {
