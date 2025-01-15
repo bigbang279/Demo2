@@ -50,7 +50,7 @@ export const wasteData = {
       "уут",
       "хайрцаг",
     ],
-    url: "../Demo2/html/usage/usage1.html",
+    url: "../html/usage/usage1.html",
   },
   burnable: {
     vi: [
