@@ -50,7 +50,7 @@ export const wasteData = {
       "уут",
       "хайрцаг",
     ],
-    url: "../../html/usage/usage1.html",
+    url: "../html/usage/usage1.html",
   },
   burnable: {
     vi: [
@@ -141,7 +141,7 @@ export const wasteData = {
       "ариун цэврийн цаас",
       "эрдэнэ шишийн хальс",
     ],
-    url: "../../html/usage/usage2.html",
+    url: "../html/usage/usage2.html",
   },
   nonBurnable: {
     vi: [
@@ -232,27 +232,27 @@ export const wasteData = {
       "цахилгааны утас",
       "гал унтраагч",
     ],
-    url: "../../html/usage/usage3.html",
+    url: "../html/usage/usage3.html",
   },
   oversized: {
     vi: ["tủ lạnh", "máy giặt"],
     ja: ["冷蔵庫", "洗濯機"],
     en: ["refrigerator", "washing machine"],
     mn: ["хөргөгч", "угаалгын машин"],
-    url: "../../html/usage/usage3.html",
+    url: "../html/usage/usage3.html",
   },
   appliances: {
     vi: ["máy sấy tóc", "bàn là"],
     ja: ["ヘアドライヤー", "アイロン"],
     en: ["hair dryer", "iron"],
     mn: ["үс хатаагч", "индүү"],
-    url: "../../html/usage/usage3.html",
+    url: "../html/usage/usage3.html",
   },
   electronics: {
     vi: ["máy tính", "điện thoại"],
     ja: ["コンピュータ", "携帯電話"],
     en: ["computer", "phone"],
     mn: ["компьютер", "утас"],
-    url: "../../html/usage/usage3.html",
+    url: "../html/usage/usage3.html",
   },
 };
