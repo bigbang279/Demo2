@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/components.css" />
     <link rel="stylesheet" href="../css/layout.css" />
     <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="../css/message.css" />
   </head>
   <body>
     <!-- Header Navigation -->
@@ -36,6 +37,32 @@
       </a>
       <h2>プレゼンテーションの１K</h2>
       <p>このページはゴミの分別方法について説明します。</p>
+
+      <!-- Messaging Section -->
+      <section id="message-section">
+        <h2>お問い合わせ</h2>
+        <form id="message-form" action="send-email.php" method="post">
+          <label for="message-name">名前:</label>
+          <input type="text" id="message-name" name="message-name" required />
+
+          <label for="message-email">メールアドレス:</label>
+          <input
+            type="email"
+            id="message-email"
+            name="message-email"
+            required
+          />
+
+          <label for="message-content">メッセージ:</label>
+          <textarea
+            id="message-content"
+            name="message-content"
+            required
+          ></textarea>
+
+          <button type="submit">送信する</button>
+        </form>
+      </section>
     </main>
 
     <!-- Footer -->
