@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     en: "Click here to see usage instructions",
     vi: "Nhấp vào đây để xem cách xử lý",
     mn: "Энд дарж ашиглах зааврыг үзнэ үү",
+    zh: "点击这里查看使用说明",
   };
 
   // Hàm cập nhật văn bản của usageLink theo ngôn ngữ đã chọn
@@ -33,7 +34,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (keyword) {
       // Giả sử bạn có hàm `classifyWaste` trong `classificationFunctions.js` để tìm kiếm kết quả
       const result = classifyWaste(selectedLanguage, keyword); // Tìm kết quả
-      resultDiv.innerText = result || "結果が見つかりませんでした。"; // Hiển thị kết quả hoặc thông báo không tìm thấy
+      const noResultMessages = {
+        ja: "結果が見つかりませんでした。",
+        en: "No results found.",
+        vi: "Không tìm thấy kết quả.",
+        mn: "Үр дүн олдсонгүй.",
+        zh: "未找到结果。",
+      };
+      resultDiv.innerText = result || noResultMessages[selectedLanguage]; // Hiển thị kết quả hoặc thông báo không tìm thấy
 
       if (result) {
         updateUsageLinkText(); // Cập nhật nội dung của usageLink theo ngôn ngữ
@@ -42,7 +50,14 @@ document.addEventListener("DOMContentLoaded", () => {
         usageLink.style.display = "none"; // Ẩn liên kết nếu không có kết quả
       }
     } else {
-      resultDiv.innerText = "入力してください...";
+      const emptyKeywordMessages = {
+        ja: "入力してください...",
+        en: "Please enter a keyword...",
+        vi: "Vui lòng nhập từ khóa...",
+        mn: "Түлхүүр үгээ оруулна уу...",
+        zh: "请输入关键词...",
+      };
+      resultDiv.innerText = emptyKeywordMessages[selectedLanguage]; // Hiển thị thông báo khi không nhập từ khóa
       usageLink.style.display = "none"; // Ẩn liên kết nếu không nhập từ khóa
     }
   });

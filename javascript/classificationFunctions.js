@@ -16,6 +16,7 @@ function classifyWaste() {
       ja: "キーワードを入力してください。",
       en: "Please enter a keyword to classify waste.",
       mn: "Хог ангилахын тулд түлхүүр үг оруулна уу.",
+      zh: "请输入关键词以分类垃圾。",
     };
     resultDiv.innerText = messages[selectedLanguage];
     resultDiv.style.color = "black";
@@ -40,36 +41,42 @@ function classifyWaste() {
         ja: `ゴミ「${keyword}」はリサイクル可能です。`,
         en: `Waste "${keyword}" is recyclable.`,
         mn: `Хог "${keyword}" нь дахин боловсруулах боломжтой.`,
+        zh: `垃圾 "${keyword}" 可回收。`,
       },
       burnable: {
         vi: `Rác "${keyword}" là rác cháy được.`,
         ja: `ゴミ「${keyword}」は燃えるゴミです。`,
         en: `Waste "${keyword}" is burnable.`,
         mn: `Хог "${keyword}" нь шатдаг.`,
+        zh: `垃圾 "${keyword}" 可燃烧。`,
       },
       nonBurnable: {
         vi: `Rác "${keyword}" là rác không cháy được.`,
         ja: `ゴミ「${keyword}」は燃えないゴミです。`,
         en: `Waste "${keyword}" is non-burnable.`,
         mn: `Хог "${keyword}" нь шатдаггүй.`,
+        zh: `垃圾 "${keyword}" 不可燃。`,
       },
       oversized: {
         vi: `Rác "${keyword}" là đồ quá khổ.`,
         ja: `ゴミ「${keyword}」は大型ゴミです。`,
         en: `Waste "${keyword}" is oversized.`,
         mn: `Хог "${keyword}" нь том хэмжээтэй.`,
+        zh: `垃圾 "${keyword}" 是超大垃圾。`,
       },
       appliances: {
         vi: `Rác "${keyword}" là đồ gia dụng.`,
         ja: `ゴミ「${keyword}」は家電です。`,
         en: `Waste "${keyword}" is a household appliance.`,
         mn: `Хог "${keyword}" нь гэр ахуйн цахилгаан хэрэгсэл.`,
+        zh: `垃圾 "${keyword}" 是家用电器。`,
       },
       electronics: {
         vi: `Rác "${keyword}" là thiết bị điện tử.`,
         ja: `ゴミ「${keyword}」は電子機器です。`,
         en: `Waste "${keyword}" is an electronic device.`,
         mn: `Хог "${keyword}" нь цахилгаан хэрэгсэл.`,
+        zh: `垃圾 "${keyword}" 是电子设备。`,
       },
     };
 
@@ -83,7 +90,8 @@ function classifyWaste() {
       vi: `Nhấp vào đây để xem cách xử lý ${keyword}.`,
       ja: `「${keyword}」の処理方法を見るにはここをクリックしてください。`,
       en: `Click here to see how to handle ${keyword}.`,
-      mn: `${keyword}-г хэрхэн шийдвэрлэхийг энд дарж үзнэ үү.`,
+      mn: `${keyword}-г хэрхэн шийдвэрлэхийг энд дарж үзнэ үү。`,
+      zh: `点击这里查看如何处理 "${keyword}"。`,
     }[selectedLanguage];
     usageLink.style.display = "inline"; // Hiển thị liên kết khi có kết quả
   } else {
@@ -92,7 +100,8 @@ function classifyWaste() {
       vi: `Không tìm thấy thông tin về loại rác "${keyword}" trong ngôn ngữ đã chọn.`,
       ja: `選択した言語で「${keyword}」のゴミ情報が見つかりません。`,
       en: `No waste information found for "${keyword}" in the selected language.`,
-      mn: `Сонгосон хэлээр "${keyword}" хогийн мэдээлэл олдсонгүй.`,
+      mn: `Сонгосон хэлээр "${keyword}" хогийн мэдээлэл олдсонгүй。`,
+      zh: `在所选语言中未找到 "${keyword}" 的垃圾信息。`,
     };
     resultDiv.innerText = notFoundMessages[selectedLanguage];
     resultDiv.style.color = "black";
